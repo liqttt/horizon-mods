@@ -1,0 +1,41 @@
+id = "spatial_gui"
+kind = "native-mod"
+name = "Spatial GUI"
+summary = "Renders inventory, creative, and container screens as a 3D plane in the world with smooth third-person camera transitions."
+description = """
+Spatial GUI transforms flat inventory, creative, and container screens (chests, furnaces, smokers, crafting tables, workstations) into interactive 3D planes floating in the game world.
+
+- **Third-Person Over-the-Shoulder Mode:** Your camera smoothly swings behind and beside your player model while the menu floats in 3D world space with a subtle drop shadow, then smoothly returns when closed.
+- **First-Person Mode:** Keeps your normal first-person perspective and hand visible while projecting the opened UI directly in front of you in 3D space.
+- **Analytic Ray-Plane Cursor Mapping:** Mouse coordinates are unprojected onto the 3D plane every frame so slot clicks, drags, shift-clicks, and tooltips align accurately.
+- **Clean World & Flat Overlays:** Clears dark screen tint and background blur behind the 3D GUI, while keeping F3 debug text and advancement/recipe toasts flat.
+- **Settings & Keybind:** Full English settings with tooltips under `Options > Mods > Spatial GUI > Config`, plus `F8` toggle in `Options > Controls`.
+
+This mod uses `#![deny(unsafe_code)]`, makes no network requests, and collects no telemetry. All three `[[native.mixin]]` targets are documented in the repository README.
+
+A Horizon Rust port of [Spatial GUI](https://github.com/tastytrash/Spatial-GUI) by tastytrash (MIT License).
+"""
+authors = ["liqttt"]
+owners = ["liqttt"]
+owner_ids = [170752801]
+license = "MIT"
+source = "https://github.com/liqttt/horizon-spatial-gui"
+icon = "icons/spatial_gui.png"
+screenshots = [
+  "screenshots/spatial_gui/third_person_smoker.jpg",
+  "screenshots/spatial_gui/third_person_chest.jpg",
+  "screenshots/spatial_gui/third_person_crafting.jpg",
+  "screenshots/spatial_gui/first_person_chest.jpg",
+  "screenshots/spatial_gui/first_person_crafting.jpg",
+  "screenshots/spatial_gui/first_person_smoker.jpg",
+]
+categories = ["utility"]
+tags = ["gui", "inventory", "3d", "camera"]
+
+[[versions]]
+version = "0.1.0"
+published = "2026-11-24"
+game = "26.3"
+file = "spatial_gui.hmod"
+sha256 = "b13bf4de8bfc493121b0681b2673a7e50d5e1b628378dd0edd021b331c75debb"
+changelog = "Initial Horizon native mod release (26.3, Nightly f1bb66f): world-space 3D GUI plane, third-person over-the-shoulder camera swing, first-person mode, analytic ray-plane cursor mapping, 3D drop shadow, and English settings with tooltips."
