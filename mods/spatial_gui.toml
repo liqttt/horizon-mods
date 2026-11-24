@@ -11,6 +11,8 @@ Spatial GUI transforms flat inventory, creative, and container screens (chests, 
 - **Clean World & Flat Overlays:** Clears dark screen tint and background blur behind the 3D GUI, while keeping F3 debug text and advancement/recipe toasts flat.
 - **Settings & Keybind:** Full English settings with tooltips under `Options > Mods > Spatial GUI > Config`, plus `F8` toggle in `Options > Controls`.
 
+**Multiplayer Warning:** Spatial GUI is disabled by default (`Enable Spatial GUI = false`, toggle with `F8` or in mod settings) because it remaps inventory cursor input onto the 3D plane. Multiplayer servers may disallow or flag inventory input remapping, so players should check the server's rules before turning it on. The third-person camera position override is also disabled in multiplayer and block-collision clipped in singleplayer.
+
 This mod uses `#![deny(unsafe_code)]`, makes no network requests, and collects no telemetry. All three `[[native.mixin]]` targets are documented in the repository README.
 
 A Horizon Rust port of [Spatial GUI](https://github.com/tastytrash/Spatial-GUI) by tastytrash (MIT License).
@@ -37,5 +39,5 @@ version = "0.1.0"
 published = "2026-11-24"
 game = "26.3"
 file = "spatial_gui.hmod"
-sha256 = "b13bf4de8bfc493121b0681b2673a7e50d5e1b628378dd0edd021b331c75debb"
-changelog = "Initial Horizon native mod release (26.3, Nightly f1bb66f): world-space 3D GUI plane, third-person over-the-shoulder camera swing, first-person mode, analytic ray-plane cursor mapping, 3D drop shadow, and English settings with tooltips."
+sha256 = "18f61fcd83b8781a8a338c3ddc3fad395677baf8684b2bf90c8cfce57d694b8f"
+changelog = "Initial Horizon native mod release (26.3, Nightly f1bb66f): world-space 3D GUI plane, third-person over-the-shoulder camera swing (singleplayer only with block collision clipping), first-person mode, analytic ray-plane cursor mapping (disabled by default), 3D drop shadow, and English settings with tooltips."
